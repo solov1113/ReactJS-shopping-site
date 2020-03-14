@@ -1,38 +1,69 @@
+body{
+  background-color: #F6F6F6 ;
+  font-family: sans-serif;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  background-color: white;
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-content{
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 90%;
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.header-logo{
+  font-size: 16pt;
+  margin-left: 30px;
+}
+.header-buttons{
+  margin: auto;
+  display: inherit;
+}
+.header-button{
+  margin: auto;
+  padding: 0 20px;
+}
+.header-icons{
+  display: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shopping-card-icon{
+  background-image: url("/static/media/supermarket.4e4cb6a8.svg");
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+}
+.quantity-counter{
+  border-radius: 50%;
+  background-color: #FF3100;
+  width: 16px;
+  height: 12px;
+  display: block;
+  font-size: 10pt;
+  float: right;
+  position: relative;
+  top: -6px;
+  right: -8px;
+  font-size: 8pt;
+  padding: 5px 3px;
+  font-weight: bold;
+  top: -12px;
+  right: -12px;
+}
+
+.current-page-border{
+  border-bottom: 5px solid #FF3100;
+  padding: 26px;
 }
