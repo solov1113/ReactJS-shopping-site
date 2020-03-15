@@ -6,7 +6,7 @@ function Card(props) {
     return (
         <div className="card-container">
             <div className="card">
-                <img src="https://img-trendyol.mncdn.com/Assets/ProductImages/oa/47/2526816/1/4055012260221_1_org.jpg" alt={props.model} className="item-image"/>
+                <img src={props.image} alt={props.model} className="item-image"/>
                 <div className="card-info">
                     <span className="brand-text">{props.brand}</span>
                     <span className="model-text">{props.model}</span>
