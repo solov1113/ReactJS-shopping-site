@@ -34,13 +34,14 @@ body{
 .header-button{
   margin: auto;
   padding: 0 20px;
+  cursor: pointer;
 }
 .header-icons{
   display: inherit;
 }
 
 .shopping-card-icon{
-  background-image: url("/static/media/supermarket.4e4cb6a8.svg");
+  background-image: url("icons/supermarket.svg");
   width: 20px;
   height: 20px;
   background-size: contain;
@@ -61,9 +62,87 @@ body{
   font-weight: bold;
   top: -12px;
   right: -12px;
+  color: white;
 }
 
 .current-page-border{
   border-bottom: 5px solid #FF3100;
   padding: 26px;
+}
+
+.card{
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 25px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: white;
+  padding-bottom: 15px;
+}
+
+img{
+  border: 0px;
+}
+.item-image{
+  width: 100%;
+  box-shadow: 0px 0px 38px -1px rgba(0, 0, 0, 0.06);
+}
+
+.items-container{
+  display: flex;
+flex-wrap: wrap;
+width: 85%;
+min-height: 600px;
+}
+
+.filters{
+  width: 15%;
+margin-right: 15px;
+}
+
+.shopping-page{
+  display: flex;
+padding: 20px 2%;
+max-width: 1200px;
+margin: 50px auto 0;
+}
+
+.card-info{
+  text-align: left;
+  margin-top: 30px;
+  display: grid;
+}
+
+.brand-text{
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.model-text{
+  font-size: 10pt;
+  color: grey;
+}
+.item-price-text{
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 14pt;
+}
+
+.add-button{
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ff3100;
+  color: white;
+  margin: 10px 10px;
+}
+.card-container{
+  width: 25%;
+  position: relative;
+  text-align: center;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: white;
+  height: min-content;
+  margin: 0px 15px;
+  margin-bottom: 20px;
 }

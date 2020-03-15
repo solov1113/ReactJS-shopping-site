@@ -1,12 +1,12 @@
 import React from 'react'
 import NavBarButton from './NavBarButton'
 import { ReactComponent as Search } from '../icons/search.svg'
-import  Shopping from '../icons/supermarket.svg'
+import { connect } from 'react-redux'
 
-export default function NavBar(props) {
+function NavBar(props) {
 
-    let quantityCounter = 0
-
+    let quantityCounter = props.inCard.length
+    
     return (
         <div className="header">
             <div className="header-content">
@@ -26,3 +26,12 @@ export default function NavBar(props) {
         </div>
     )
 }
+
+const mapStateToProps = state =>{
+
+    return {
+        inCard: state.inCard
+    }
+}
+
+export default connect(mapStateToProps)(NavBar)

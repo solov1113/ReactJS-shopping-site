@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function NavBarButton(props) {
-    console.log(props)
     return (
         
         <div>
