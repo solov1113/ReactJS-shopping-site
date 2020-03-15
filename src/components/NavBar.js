@@ -18,7 +18,7 @@ function NavBar(props) {
                 </div>
                 <div className="header-icons">
                     <Search style={{height:'20px', width:'20px', marginRight: '20px'}}/>
-                    <div className="shopping-card-icon">
+                    <div className="shopping-card-icon" onClick={() => { props.setActive(props)}}>
                         <span className={`${quantityCounter > 0 ? "quantity-counter" : null}`}>{quantityCounter > 0 ? quantityCounter : null}</span>
                     </div>
                 </div>
@@ -30,8 +30,17 @@ function NavBar(props) {
 const mapStateToProps = state =>{
 
     return {
-        inCard: state.inCard
+        inCard: state.inCard,
+        isCartMenuActivated: state.isCartMenuActivated
     }
 }
 
-export default connect(mapStateToProps)(NavBar)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setActive: (props) => {
+            dispatch({type: "CART_MENU_ACTIVE", status: !(props.isCartMenuActivated)})
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar)

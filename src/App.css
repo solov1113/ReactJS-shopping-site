@@ -10,6 +10,8 @@ body{
 .header{
   background-color: white;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 .header-content{
   background-color: white;
@@ -145,4 +147,19 @@ margin: 50px auto 0;
   height: min-content;
   margin: 0px 15px;
   margin-bottom: 20px;
+}
+
+.cart-menu{
+  position: fixed;
+  top: 0px;
+  right: -450px;
+  width: 450px;
+  height: 100%;
+  background-color: #1b1a20;
+  box-sizing: border-box;
+  -webkit-transition: right .2s;
+  transition: right .2s;
+}
+.cart-menu-active{
+  right: 0px;
 }

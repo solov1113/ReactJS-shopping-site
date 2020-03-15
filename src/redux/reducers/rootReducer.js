@@ -1,5 +1,6 @@
 const initState = {
-    inCard: []
+    inCard: [],
+    isCartMenuActivated: false
 }
 
 const rootReducer = (state = initState, action) => {
@@ -7,6 +8,12 @@ const rootReducer = (state = initState, action) => {
         return {
             ...state,
             inCard: [...state.inCard, action.item]
+        }
+    }
+    else if(action.type === "CART_MENU_ACTIVE"){
+        return {
+            ...state,
+            isCartMenuActivated: action.status
         }
     }
     else{

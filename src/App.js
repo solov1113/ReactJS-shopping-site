@@ -4,7 +4,7 @@ import NavBar from './components/NavBar'
 import ShoppingPage from './components/ShoppingPage';
 import store from './redux/store'
 import { Provider } from 'react-redux'
-
+import CartMenu from './components/CartMenu'
 
 function App() {
   let currentPage = "SHOP"
@@ -19,6 +19,7 @@ function App() {
       <div className="App">
         <NavBar currentPage={currentPage}/>
         <ShoppingPage />
+        <CartMenu />
       </div>
     </Provider>
 
