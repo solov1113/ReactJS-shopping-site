@@ -2,10 +2,9 @@ import React from 'react'
 import NavBarButton from './NavBarButton'
 import { ReactComponent as Search } from '../icons/search.svg'
 import { connect } from 'react-redux'
+import ShoppingCartIcon from './ShoppingCartIcon'
 
 function NavBar(props) {
-
-    let quantityCounter = props.inCard.length
     
     return (
         <div className="header">
@@ -18,9 +17,7 @@ function NavBar(props) {
                 </div>
                 <div className="header-icons">
                     <Search style={{height:'20px', width:'20px', marginRight: '20px'}}/>
-                    <div className="shopping-card-icon" onClick={() => { props.setActive(props)}}>
-                        <span className={`${quantityCounter > 0 ? "quantity-counter" : null}`}>{quantityCounter > 0 ? quantityCounter : null}</span>
-                    </div>
+                    <ShoppingCartIcon bgColor="black" sizes="20px"/>
                 </div>
             </div>
         </div>
@@ -35,12 +32,5 @@ const mapStateToProps = state =>{
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        setActive: (props) => {
-            dispatch({type: "CART_MENU_ACTIVE", status: !(props.isCartMenuActivated)})
-        }
-    }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar)
+export default connect(mapStateToProps)(NavBar)

@@ -42,11 +42,9 @@ body{
   display: inherit;
 }
 
-.shopping-card-icon{
-  background-image: url("icons/supermarket.svg");
-  width: 20px;
-  height: 20px;
-  background-size: contain;
+.shopping-cart-icon{
+  display: flex;
+  cursor: pointer;
 }
 .quantity-counter{
   border-radius: 50%;
@@ -148,6 +146,10 @@ margin: 50px auto 0;
   margin: 0px 15px;
   margin-bottom: 20px;
 }
+.card-container:hover{
+  box-shadow: 0px 0px 18px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ecebeb;
+}
 
 .cart-menu{
   position: fixed;
@@ -155,11 +157,75 @@ margin: 50px auto 0;
   right: -450px;
   width: 450px;
   height: 100%;
-  background-color: #1b1a20;
   box-sizing: border-box;
   -webkit-transition: right .2s;
   transition: right .2s;
+  background-color: #1f1d26;
 }
 .cart-menu-active{
   right: 0px;
 }
+
+.cart-title{
+  color:white;
+  margin-top: 100px;
+  font-size: 22pt;
+  display: inline-flex;
+  margin-bottom: 50px;
+}
+.cart-title-text{
+  margin-right: 10px;
+}
+.margin-top{
+  margin-top: 2px;
+}
+.cart-icon-right{
+  right: -18px;
+  top: -10px
+}
+.cart-body{
+  color: white;
+  position: relative;
+  min-height: 280px;
+  padding-bottom: 200px;
+}
+.cart-menu-item{
+  padding: 5%;
+  display: inline-flex;
+}
+.cart-menu-item-photo{
+  vertical-align: middle;
+  width: 18%;
+  margin-right: 3%;
+}
+.cart-menu-item-details{
+  width: 55%;
+  margin-right: 20px;
+}
+.cart-menu-item-title{
+  text-align: left;
+  font-size: 12pt;
+  display: block;
+  margin-bottom: 10px;
+}
+.cart-menu-item-details-text{
+  text-align: left;
+  font-size: 10pt;
+  display: block;
+  margin-bottom: 10px;
+}
+.cart-menu-item-right{
+  font-size: 12pt;
+  margin: auto;
+  width: 30%;
+}
+.cart-menu-item-button{
+  background-color: #ff3100;
+  color: #b7b7b7;
+  border: 0;
+  border-radius: 2px;
+  width: 25px;
+  height: 25px;
+  margin: 4px;
+  margin-top: 10px;
+  }

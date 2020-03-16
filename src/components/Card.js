@@ -29,7 +29,7 @@ const mapStateToProps = (state) =>{
 const mapDispatchToProps = (dispatch) => {
     return {
         addItem: (props) => {
-            dispatch({type: "ADD_LIST", item: {id: props.id, brand: props.brand, model: props.model, price: props.price}})
+            dispatch({type: "ADD_LIST", item: {id: props.id, brand: props.brand, model: props.model, price: props.price, image: props.image}})
         }
     }
 }
