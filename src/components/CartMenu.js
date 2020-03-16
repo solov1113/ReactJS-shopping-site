@@ -19,9 +19,14 @@ function CartMenu(props) {
                     : 
                     (
                         <div className="cart-menu-items"> 
-                            <CartMenuItem/>
-                            <CartMenuItem/>
-
+                            
+                            {
+                                props.inCard.map(item => {
+                                    return(
+                                        <CartMenuItem item={item}/>
+                                    )
+                                })
+                            }
                         </div>
                     )
                 }
