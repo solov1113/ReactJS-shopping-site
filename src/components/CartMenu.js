@@ -23,7 +23,7 @@ function CartMenu(props) {
                             {
                                 props.inCard.map(item => {
                                     return(
-                                        <CartMenuItem item={item}/>
+                                        <CartMenuItem key={item.id} item={item}/>
                                     )
                                 })
                             }

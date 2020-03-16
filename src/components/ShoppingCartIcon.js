@@ -3,7 +3,11 @@ import { connect } from 'react-redux'
 import { ReactComponent as CartIcon } from '../icons/supermarket.svg'
 
 function ShoppingCartIcon(props) {
-    let quantityCounter = props.inCard.length
+    
+    let quantityCounter = 0
+    for(let i = 0; i < props.inCard.length; i++)
+        quantityCounter += props.inCard[i].piece
+
     return (
         <div className={`shopping-cart-icon ${props.className}`} onClick={() => { props.setActive(props)}}>
             <CartIcon width={props.sizes} height={props.sizes} style={{position: "absolute"}} fill={props.bgColor}/>

@@ -29,7 +29,10 @@ const mapStateToProps = (state) =>{
 const mapDispatchToProps = (dispatch) => {
     return {
         addItem: (props) => {
-            dispatch({type: "ADD_LIST", item: {id: props.id, brand: props.brand, model: props.model, price: props.price, image: props.image}})
+            props.inCard.find(x => x.id === props.id) ? 
+            dispatch({type: "INCREMENT_ITEM_PIECE", item: {...props}}) 
+            :
+            dispatch({type: "ADD_LIST", item: {id: props.id, brand: props.brand, model: props.model, price: props.price, image: props.image, piece: 1}})
         }
     }
 }
