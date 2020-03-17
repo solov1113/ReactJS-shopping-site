@@ -1,18 +1,32 @@
 import React from 'react'
+import data from '../data'
+import FilterButton from './FilterButton'
 
-export default function Filters() {
+function Filters() {
+
+    let sizeSet = new Set()
+    data.map(item => {
+        item.sizes.forEach(size => sizeSet.add(size))
+    })
+    sizeSet = Array.from(sizeSet) // set to array
+
     return (
         <div className="filters">
-            <span style={{textAlign: "center"}}>Filters</span>
-            <p style={{fontWeight: "bold"}}>Sizes:</p>
+            <span className="filters-text">Filters</span>
+            <p style={{fontWeight: "bold"}}>Shoe size:</p>
             <div className="sizes">
-                <div className="sizes-button">39</div>
-                <div className="sizes-button">39</div>
-                <div className="sizes-button">39</div>
-                <div className="sizes-button">39</div>
-                <div className="sizes-button">39</div>
-                <div className="sizes-button">39</div>
+
+                {
+                    sizeSet.map(size => {
+                        return <FilterButton key={size} size={size}/>
+                    })
+                }
+
             </div>
         </div>
     )
 }
+
+
+
+export default Filters

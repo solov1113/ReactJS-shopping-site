@@ -278,3 +278,15 @@ margin: 0px auto 0;
   margin-right: 10px;
   margin-bottom: 16px;
 }
+.sizes-button:hover{
+  border: 1px solid #ee3100;
+}
+.sizes-button-clicked{
+  background: #ee3100;
+}
+.filters-text{
+  text-align: center;
+  display: grid;
+  font-size: 16pt;
+  margin-bottom: 30px;
+}

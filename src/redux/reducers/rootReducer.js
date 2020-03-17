@@ -1,6 +1,7 @@
 const initState = {
     inCard: [],
-    isCartMenuActivated: false
+    isCartMenuActivated: false,
+    filters: []
 }
 
 const rootReducer = (state = initState, action) => {
@@ -37,6 +38,14 @@ const rootReducer = (state = initState, action) => {
             isCartMenuActivated: action.status
         }
     }
+    else if(action.type === "UPDATE_FILTER"){
+        (state.filters.findIndex(x => x === action.size)) === -1 ? state.filters.push(action.size) : state.filters.splice((state.filters.findIndex(x => x === action.size)), 1)
+        return {
+            ...state,
+            filters: [...state.filters]
+        }
+    }
+
     else{
         return state
     }
