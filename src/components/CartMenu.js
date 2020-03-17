@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import ShoppingCartIcon from './ShoppingCartIcon'
 import CartMenuItem from './CartMenuItem'
+import Subtotal from './Subtotal'
 
 function CartMenu(props) {
 
@@ -30,7 +31,9 @@ function CartMenu(props) {
                         </div>
                     )
                 }
+                
             </div>
+            <Subtotal />
         </div>
     )
 }

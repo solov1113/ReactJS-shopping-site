@@ -5,7 +5,7 @@ function CartMenuItem(props) {
     return (
         <div className="cart-menu-item">
             <div className="cart-menu-item-photo">
-                <img src="https://img-trendyol.mncdn.com/Assets/ProductImages/oa/47/2526816/1/4055012260221_1_org.jpg" style={{width: "100%"}}></img>
+                <img src={props.item.image} style={{width: "100%"}}></img>
             </div>
             <div className="cart-menu-item-details">
                 <span className="cart-menu-item-title">{props.item.brand}</span>
